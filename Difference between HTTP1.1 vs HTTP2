@@ -1,0 +1,27 @@
+Difference between HTTP1.1 vs HTTP2
+
+HTTP/1.1 vs. HTTP/2
+The world of web communication has seen significant advancements over the years. One of the most impactful developments in recent times has been the transition from HTTP/1.1 to HTTP/2. 
+These protocols underpin the foundation of the World Wide Web, and understanding the differences between them is crucial for web developers, system administrators, and anyone interested in web performance optimization.
+
+HTTP/1.1: The Old Workhorse
+HTTP/1.1, the 1.1 version of the Hypertext Transfer Protocol, has been the backbone of the web for over a decade. 
+While it served its purpose well, it had limitations that needed to be addressed as the web evolved.
+
+Header Blocking: 
+In HTTP/1.1, all resources (HTML, CSS, JavaScript, images, etc.) were fetched sequentially. 
+This meant that if a resource further down the line was slow to load, it would block the loading of subsequent resources. This 'head-of-line' blocking resulted in slower page load times
+
+HTTP/2: A Modern Solution
+HTTP/2 was developed to address the limitations of HTTP/1.1 and to improve the efficiency of web communication. Here are some key differences:
+Multiplexing: HTTP/2 introduced multiplexing, which allows multiple requests and responses to be sent concurrently over a single connection. 
+This eliminates the head-of-line blocking problem and significantly speeds up page loading.
+
+Header Compression: HTTP/2 uses header compression to reduce redundant data in header fields. This results in a reduced overhead for each request and response, making the communication more efficient.
+Server Push:HTTP/2 supports server push, enabling the server to proactively send resources to the client before they are explicitly requested. This reduces the number of round-trips and speeds up page loading.
+Stream Prioritization: HTTP/2 allows for stream prioritization, which lets the client specify the order in which it would like to receive resources. This helps ensure that critical resources are delivered first.
+Connection Reuse: HTTP/2 encourages connection reuse, reducing the need to establish new connections for each request, which further decreases latency.
+
+Testing and Optimization: Even with HTTP/2, optimizing your website for performance remains important. Compress resources, use efficient coding practices, and prioritize critical content.
+
+
